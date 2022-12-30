@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(248, 246, 246);
+    color: rgb(15, 15, 15);
+    font-family: 'Verdana', sans-serif;
+}
+
+img {
+    margin: 10px 20px;
+    padding: auto;
+
+    height: auto;
+    width: 300px;
+    border-radius: 0.5em;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 800;
+}
+
+.recipe-page {
+    text-align: center;
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}

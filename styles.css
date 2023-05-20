@@ -10,13 +10,9 @@ body {
     font-family: 'Verdana', sans-serif;
 }
 
-img {
-    margin: 10px 20px;
-    padding: auto;
-
-    height: auto;
-    width: 300px;
-    border-radius: 0.5em;
+header {
+    padding: 20px;
+    border-bottom: 1px solid rgb(251, 188, 0);
 }
 
 h1 {
@@ -24,8 +20,66 @@ h1 {
     font-weight: 800;
 }
 
+main {
+    width: 80%;
+    display: flex;
+}
+
+.intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+
+.intro-outer-container {
+    position: absolute;
+    bottom: 50px;
+    width: 70%;
+
+    background-color: hsl(45, 100%, 95%);
+    padding: 20px;
+}
+
+.intro-text-container {
+    border: 1px solid rgb(251, 188, 0);
+    padding: 30px;
+    text-align: center;
+}
+
+.right-arrow {
+    font-size: 32px;
+}
+
+ul {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+}
+
+li img {
+    width: 150px;
+}
+
 .recipe-page {
     text-align: center;
+}
+
+a:link {
+    text-decoration: none;
 }
 
 a:hover {
@@ -34,4 +88,41 @@ a:hover {
 
 a:active {
 
+}
+
+footer {
+    padding: 20px;
+    border-top: 1px solid rgb(251, 188, 0);
+    text-align: center;
+}
+
+footer a:link {
+    color: hsl(187, 97%, 28%);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: hsl(187, 97%, 40%);
+    text-decoration: underline;
+}
+
+footer a:active {
+    color: rgb(251, 188, 0);
+}
+
+footer a:visited {
+    color: hsl(329, 100%, 55%);
+}
+
+footer p:first-of-type {
+    padding-bottom: 15px;
+}
+
+footer p:last-of-type {
+    padding-top: 15px;
+}
+
+footer img {
+    height: 17px;
+    width: 17px;
 }

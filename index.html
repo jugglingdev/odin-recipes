@@ -8,12 +8,56 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <header>
         <h1>Odin Recipes</h1>
-            <img src="/images/cooking.jpg" alt="produce being prepped on a long cutting board and in bowls">
-            <ul>
-                <li><a class="recipe-page" href="recipes/bulgogi.html">Bulgogi</a></li>
-                <li><a class="recipe-page" href="recipes/butter-chicken.html">Butter Chicken</a></li>
-                <li><a class="recipe-page" href="recipes/honey-garlic-glazed-salmon.html">Honey Garlic Glazed Salmon</a></li>
-            </ul>
+        </header>
+        <main>
+            <section class="intro">
+                <img src="/images/cooking.jpg" alt="produce being prepped on a long cutting board and in bowls">
+                <div class="intro-outer-container">
+                    <div class="intro-text-container">
+                        <h2>Welcome!</h2>
+                        <p>Hungry?  Take a look at these tasty recipes <span class="right-arrow">&#8594;</span></p>
+                    </div>
+                </div>
+            </section>
+            <section class="home-page-recipes">
+                <ul class="recipe-list">
+                    <li class="recipe-list-item">
+                        <a class="recipe-link" href="recipes/bulgogi.html">
+                            <img src="./images/bulgogi.jpg" alt="Korean bulgogi">
+                            <div>
+                                <h2>Bulgogi</h2>
+                                <p>A Korean classic</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="recipe-list-item">
+                        <a class="recipe-link" href="recipes/butter-chicken.html">
+                            <img src="./images/butter-chicken.jpg" alt="butter chicken">
+                            <div>
+                                <h2>Butter Chicken</h2>
+                                <p>Savory Indian</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="recipe-list-item">
+                        <a class="recipe-link" href="recipes/honey-garlic-glazed-salmon.html">
+                            <img src="./images/salmon.jpg" alt="honey garlic glazed salmon">
+                            <div>
+                                <h2>Honey Garlic Glazed Salmon</h2>
+                                <p>Delightful seafood</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 
+                <script>document.write(new Date().getFullYear())</script> 
+                <a href="https://github.com/jugglingdev/" target="_blank">jugglingdev <img src="./images/github-mark/github-mark.svg" alt="GitHub social icon"></a>
+            </p>
+        </footer>
     </body>
 </html>

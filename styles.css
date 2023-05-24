@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(248, 246, 246);
     color: rgb(15, 15, 15);
@@ -13,11 +17,55 @@ body {
 header {
     padding: 20px;
     border-bottom: 1px solid rgb(251, 188, 0);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
     text-align: center;
     font-weight: 800;
+}
+
+header ul {
+    list-style-type: none;
+    line-height: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+header button {
+    border: none;
+    font-size: medium;
+}
+
+.dropdown:hover {
+    text-decoration: underline;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 54px;
+    right: 20px;
+    z-index: 1;
+    padding: 12px 16px;
+    line-height: 22px;
+    background-color: hsl(45, 100%, 90%);
+    border: 1px solid rgb(251, 188, 0);
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 main {
@@ -33,6 +81,7 @@ main {
 
 img {
     width: 100%;
+    object-fit: cover;
 }
 
 .intro-outer-container {
@@ -40,7 +89,7 @@ img {
     bottom: 50px;
     width: 70%;
 
-    background-color: hsl(45, 100%, 95%);
+    background-color: hsl(45, 100%, 90%);
     padding: 20px;
 }
 
@@ -50,8 +99,30 @@ img {
     text-align: center;
 }
 
+a:link {
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(251, 188, 0);
+}
+
+a:visited {
+    color: rgb(15, 15, 15);
+}
+
 .right-arrow {
     font-size: 32px;
+}
+
+.down-arrow {
+    font-size: 24px;
+    display: none !important;
 }
 
 .home-page-recipes {
@@ -63,7 +134,7 @@ img {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
 
@@ -76,7 +147,7 @@ img {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: hsl(45, 100%, 95%);
+    background-color: hsl(45, 100%, 90%);
 }
 
 .recipe-link:link {
@@ -100,6 +171,7 @@ img {
 .recipe-link img {
     max-width: 50%;
     max-height: 20%;
+    object-fit: cover;
 
     margin-right: 20px;
 }
@@ -153,6 +225,14 @@ footer img {
 
     .intro {
         width: 100%;
+    }
+
+    .right-arrow {
+        display: none !important;
+    }
+
+    .down-arrow {
+        display: inline !important;
     }
 
     .home-page-recipes {

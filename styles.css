@@ -132,7 +132,9 @@ a:visited {
 }
 
 .home-page-recipes h1 {
+    padding-top: 10px;
     padding-bottom: 20px;
+    text-decoration: underline rgb(251, 188, 0);
 }
 
 .recipe-list {
@@ -243,6 +245,10 @@ footer img {
         width: 100%;
     }
 
+    .home-page-recipes h1 {
+        padding-top: 20px;
+    }
+
     .recipe-list {
         flex-direction: row;
         justify-content: space-between;
@@ -259,10 +265,12 @@ footer img {
 
     .recipe-link {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 12px;
         padding-bottom: 20px;
+        height: 330px;
+
     }
 
     .recipe-link img {
@@ -283,5 +291,85 @@ footer img {
 }
 
 @media only screen and (max-width: 400px) {
+    header {
+        flex-direction: column;
+    }
 
+    .dropdown-content {
+        top: 84px;
+        right: 54px;
+    }
+    
+    main {
+        flex-direction: column;
+    }
+
+    .intro {
+        width: 100%;
+    }
+
+    .intro-outer-container {
+        position: absolute;
+        bottom: 15px;
+        width: 90%;
+        padding: 12px;
+    }
+
+    .intro-text-container {
+        padding: 10px;
+    }
+
+    .right-arrow {
+        display: none !important;
+    }
+
+    .down-arrow {
+        display: inline !important;
+    }
+
+    .home-page-recipes {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .home-page-recipes h1 {
+        padding-top: 20px;
+    }
+
+    .recipe-list {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 0;
+        text-align: center;
+    }
+
+    .recipe-list-item {
+        margin-top: 0px;
+        width: 90%;
+    }
+
+    .recipe-link {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 20px;
+        height: auto;
+    }
+
+    .recipe-link img {
+        margin-right: 0px;
+        max-width: 100%;
+        max-height: 200px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h2 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

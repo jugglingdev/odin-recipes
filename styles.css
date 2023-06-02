@@ -223,6 +223,43 @@ footer img {
     width: 17px;
 }
 
+/* Recipes pages */
+
+.description {
+    padding: 20px 20px 0 20px;
+}
+
+.recipe-heading {
+    padding-bottom: 8px;
+    text-align: left;
+}
+
+.description p {
+    padding-bottom: 16px;
+}
+
+.recipe {
+    padding: 0 20px 30px 20px;
+    line-height: 1.5em;
+}
+
+.recipe h2 {
+    padding-left: 0px;
+    padding-top: 20px;
+}
+
+.serving-size {
+    font-style: italic;
+}
+
+.recipe h3 {
+    padding-top: 12px;
+}
+
+.recipe li {
+    margin-left: 20px;
+}
+
 @media only screen and (min-width: 401px) and (max-width: 960px) {
     
     main {
@@ -270,7 +307,6 @@ footer img {
         gap: 12px;
         padding-bottom: 20px;
         height: 330px;
-
     }
 
     .recipe-link img {
@@ -287,10 +323,10 @@ footer img {
         padding-right: 10px;
     }
 
-
 }
 
 @media only screen and (max-width: 400px) {
+
     header {
         flex-direction: column;
     }
@@ -372,4 +408,5 @@ footer img {
         padding-left: 10px;
         padding-right: 10px;
     }
+    
 }

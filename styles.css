@@ -1,35 +1,77 @@
+/* || RESET */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* || UTILITIES */
+
 .nowrap {
     white-space: nowrap;
 }
+
+.center {
+    text-align: center;
+}
+
+/* || VARIABLES */
+
+:root {
+
+    /* COLORS */
+    --BG-COLOR: rgb(248, 246, 246);
+    --BOX-BG-COLOR: hsl(45, 100%, 90%);
+    --FONT-COLOR: rgb(15, 15, 15);
+    --BORDER-COLOR: rgb(251, 188, 0);
+    --FOOTER-LINK-COLOR: hsl(187, 97%, 28%);
+
+    /* PADDING */
+    --SMALL-PADDING: 0.5em;
+    --PADDING: 1em;
+    --EXTRA-PADDING: 1.5em;
+}
+
+/* || GENERAL */
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(248, 246, 246);
-    color: rgb(15, 15, 15);
+    background-color: var(--BG-COLOR);
+    color: var(--FONT-COLOR);
     font-family: 'Verdana', sans-serif;
 }
 
+a:any-link {
+    color: var(--FONT-COLOR);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--BORDER-COLOR);
+}
+
+/* || HEADER */
+
 header {
-    padding: 20px;
-    border-bottom: 1px solid rgb(251, 188, 0);
+    padding: var(--PADDING);
+    border-bottom: 1px solid var(--BORDER-COLOR);
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 h1 {
-    text-align: center;
     font-weight: 800;
 }
 
@@ -59,10 +101,10 @@ header button {
     top: 54px;
     right: 20px;
     z-index: 1;
-    padding: 12px 16px;
-    line-height: 22px;
-    background-color: hsl(45, 100%, 90%);
-    border: 1px solid rgb(251, 188, 0);
+    padding: var(--PADDING);
+    line-height: 1.5;
+    background-color: var(--BOX-BG-COLOR);
+    border: 1px solid var(--BORDER-COLOR);
 }
 
 .dropdown:hover .dropdown-content {
@@ -71,6 +113,8 @@ header button {
     justify-content: center;
     align-items: flex-end;
 }
+
+/* || MAIN */
 
 main {
     display: flex;
@@ -94,31 +138,13 @@ img {
     bottom: 50px;
     width: 70%;
 
-    background-color: hsl(45, 100%, 90%);
-    padding: 20px;
+    background-color: var(--BOX-BG-COLOR);
+    padding: var(--PADDING);
 }
 
 .intro-text-container {
-    border: 1px solid rgb(251, 188, 0);
-    padding: 30px;
-    text-align: center;
-}
-
-a:link {
-    color: rgb(15, 15, 15);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    color: rgb(251, 188, 0);
-}
-
-a:visited {
-    color: rgb(15, 15, 15);
+    border: 1px solid var(--BORDER-COLOR);
+    padding: var(--EXTRA-PADDING);
 }
 
 .right-arrow {
@@ -130,15 +156,16 @@ a:visited {
     display: none !important;
 }
 
+/* || RECIPE CARDS */
+
 .home-page-recipes {
     width: 30%;
-    padding: 20px;
+    padding: var(--PADDING);
 }
 
-.home-page-recipes h1 {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    text-decoration: underline rgb(251, 188, 0);
+.home-page-recipes h2 {
+    padding: var(--PADDING);
+    text-decoration: underline var(--BORDER-COLOR);
 }
 
 .recipe-list {
@@ -156,12 +183,17 @@ a:visited {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: hsl(45, 100%, 90%);
+    background-color: var(--BOX-BG-COLOR);
 }
 
 .recipe-link:link {
     text-decoration: none;
-    color: rgb(15, 15, 15);
+    color: var(--FONT-COLOR);
+}
+
+.recipe-link:visited {
+    text-decoration: none;
+    color: var(--FONT-COLOR);
 }
 
 .recipe-link:hover {
@@ -172,11 +204,6 @@ a:visited {
     opacity: 100%;
 }
 
-.recipe-link:visited {
-    text-decoration: none;
-    color: rgb(15, 15, 15);
-}
-
 .recipe-link img {
     max-width: 50%;
     aspect-ratio: 1 / 1;
@@ -185,49 +212,40 @@ a:visited {
     margin-right: 20px;
 }
 
-h2 {
-    padding-right: 20px;
-    padding-bottom: 8px;
+.recipe-text-container {
+    padding: var(--SMALL-PADDING);
 }
+
+h3 {
+    padding-bottom: var(--SMALL-PADDING);
+}
+
+/* || FOOTER */
 
 footer {
-    padding: 20px;
-    border-top: 1px solid rgb(251, 188, 0);
-    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--BORDER-COLOR);
 }
 
-footer a:link {
-    color: hsl(187, 97%, 28%);
+footer a:any-link {
+    color: var(--FOOTER-LINK-COLOR);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: hsl(187, 97%, 40%);
     text-decoration: underline;
 }
 
 footer a:active {
-    color: rgb(251, 188, 0);
-}
-
-footer a:visited {
-    color: hsl(329, 100%, 55%);
-}
-
-footer p:first-of-type {
-    padding-bottom: 15px;
-}
-
-footer p:last-of-type {
-    padding-top: 15px;
+    color: var(--BORDER-COLOR);
 }
 
 footer img {
-    height: 17px;
-    width: 17px;
+    height: 1em;
+    width: 1em;
 }
 
-/* Recipes pages */
+/* || RECIPE PAGES */  
 
 .description {
     padding: 20px 20px 0 20px;
